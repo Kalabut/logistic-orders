@@ -1,5 +1,6 @@
 import sqlite3
 import re
+import os
 from datetime import datetime
 from telegram import (
     Update, InlineKeyboardButton, InlineKeyboardMarkup,
@@ -11,7 +12,7 @@ from telegram.ext import (
 )
 
 # --- КОНФІГ ---
-BOT_TOKEN = "7644100040:AAHgatWn4_-Qqo7e1aR_5P9wxwUvp0gUQwA"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 ADMIN_IDS = [893509708]  # список ID адмінів
 
 NAME, PHONE, FROM, TO, DATE, WEIGHT = range(6)
