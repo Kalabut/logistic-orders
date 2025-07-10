@@ -1,6 +1,8 @@
 import sqlite3
 import re
 import os
+import threading
+from http.server import BaseHTTPRequestHandler, HTTPServer
 from datetime import datetime
 from telegram import (
     Update, InlineKeyboardButton, InlineKeyboardMarkup,
@@ -306,8 +308,6 @@ if __name__ == '__main__':
 
     print("✅ Бот запущено...")
 
-import threading
-from http.server import BaseHTTPRequestHandler, HTTPServer
 
 class HealthHandler(BaseHTTPRequestHandler):
     def do_GET(self):
