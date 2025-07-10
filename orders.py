@@ -321,4 +321,4 @@ def run_health_server():
 
 threading.Thread(target=run_health_server, daemon=True).start()
 
-    app.run_polling()
+app.run_polling()
