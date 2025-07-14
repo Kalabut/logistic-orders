@@ -316,6 +316,7 @@ class HealthHandler(BaseHTTPRequestHandler):
         self.wfile.write(b"OK")
 
 def run_health_server():
+    print("🌐 HTTP-сервер запущено на порт 8000")
     server = HTTPServer(("0.0.0.0", 8000), HealthHandler)
     server.serve_forever()
 
